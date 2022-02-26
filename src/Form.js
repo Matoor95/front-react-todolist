@@ -2,14 +2,14 @@ import React from "react";
 
 export const Form = ({tacheform,add,settacheform,editing}) => {
   return (
-    <form>
-      <div className="m-3 col-md-6">
+    <form className="form d-flex justify-content-center ">
+      <div className="col-md-6 m-3">
         <label htmlFor="exampleInputEmail1" className="form-label">
-          Nom tâche
+           Nom
         </label>
         <input type="text" className="form-control" value={tacheform.nom} onChange={(e)=>settacheform({...tacheform,nom:e.target.value})}  placeholder="entrer la tâche" />
         <label htmlFor="exampleInputEmail1" className="form-label">
-          Etat 
+          Etat
         </label>
         <input type="text" className="form-control" value={tacheform.etat} onChange={(e)=>settacheform({...tacheform,etat:e.target.value})}  placeholder="entrer etat" />
         <label htmlFor="exampleInputEmail1" className="form-label">
